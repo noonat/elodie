@@ -105,7 +105,7 @@ class Video(Media):
                         datetime.strptime(
                             date_string,
                             '%Y:%m:%d %H:%M:%S'
-                        ).timetuple()
+                        ).utctimetuple()
                     )
                     if(exif_seconds_since_epoch < seconds_since_epoch):
                         seconds_since_epoch = exif_seconds_since_epoch
